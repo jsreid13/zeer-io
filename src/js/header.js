@@ -22,7 +22,7 @@ class Header {
     if (this.container) this.container.remove();
 
     this.container = el(".header", {
-      innerHTML: '<canvas id="canvas"></canvas>',
+      innerHTML: '<canvas id="canvas" class="glcanvas"></canvas>',
     });
     let height = window.innerHeight;
 
@@ -92,7 +92,7 @@ class Header {
     // set the size of the drawingBuffer
     var devicePixelRatio = window.devicePixelRatio || 1;
     canvas.width = window.innerWidth * devicePixelRatio;
-    canvas.height = window.innerHeight * devicePixelRatio;
+    canvas.height = 2 * window.innerHeight * devicePixelRatio;
 
 
     const sandbox = new GlslCanvas(canvas);
@@ -141,7 +141,7 @@ class Header {
       vec4 march(vec3 p, vec3 d)
       {
           vec4 m = vec4(p,0);
-          for(int i = 0; i<30; i++)
+          for(int i = 0; i<28; i++)
           {
               float s = dist(m.xyz);
               m += vec4(d,1)*s;
@@ -161,9 +161,9 @@ class Header {
           float x = 0.;
           float y = 0.;
 
-          vec3 ray = normalize(vec3(gl_FragCoord.xy-res/2.,res/3.));
+          vec3 ray = normalize(vec3(gl_FragCoord.xy-res/1.5,res/3.));
           vec4 mar = march(pos,ray);
-          vec3 wat = 0.5*bac+sin(u_time/2.)*.4*ray;
+          vec3 wat = 0.5*bac+.4*ray;
           float fade = pow(min(mar.w/10.,1.),.7);
           col += mix(wat,bac,fade);
 

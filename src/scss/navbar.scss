@@ -50,14 +50,17 @@ $title-size: 6vw;
   }
   
   #navexpand {
-    color: $purple-color;
+    color: black;
+    font-size: 20px;
+    font-family: 'SourceCode';
+
   }
 
   &.nav-sub {
     position: fixed;
     padding: 0px;
     // background-color: $brown-color;
-    background-color: $purple-color;
+    background-color: black;
     right: 0px;
     left: initial;
     z-index: 15;
@@ -116,7 +119,6 @@ $title-size: 6vw;
     
     .logo-text {
       position: absolute;
-      left: 75px;
       top: calc(50% - 14px);
       font-size: 20px;
     }

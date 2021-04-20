@@ -8,6 +8,9 @@ class Arrow {
 
     draw() {
         this.container = el("span.down-arrow", {innerHTML: "<i class='fas fa-angle-down'></i>"});
+        this.container.onclick = () => {
+            window.scrollTo({top: window.innerHeight, behavior: "smooth"})
+        }
         mount(document.body, this.container);
     }
 

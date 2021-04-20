@@ -32,6 +32,8 @@ const footer = el(".footer", {innerHTML: footerHTML});
 function main() {
     navbar.draw();
     home.draw();
+    // projects.draw();
+
     // services.draw();
     // navbar.container.style.backgroundColor = "rgba(0,0,0,0)";
     navbar.onChangePage = (elem) => {
@@ -65,19 +67,6 @@ function main() {
     });
 
     document.body.appendChild(footer);
-
-    let links = {};
-    links.instagram = "https://www.instagram.com/jellyfishfab/";
-    links.facebook = "https://www.facebook.com/jellyfishfab";
-    links.linkedin = "https://www.linkedin.com/company/jellyfishfab";
-    links.youtube = "https://www.youtube.com/channel/UCASRxy5OjkMZyVIAg3Iophg";
-
-    _.map(links, (link, name) => {
-        footer.querySelector(`.${name}-button`).onclick = () => {
-            analytics.logEvent("social_clicked", {name});
-            window.location.href = link;
-        }
-    });
     
 }
 

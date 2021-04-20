@@ -21,10 +21,7 @@ class Team {
     this.container = el(".team");
     mount(document.body, this.container);
 
-    this.teamPhoto = el(".team-photo", {innerHTML: `<h1>Meet the team</h1>`});
-    mount(this.container, this.teamPhoto);
-
-    for (let name of _.shuffle(["cristina", "lucas", "yue"])) {
+    for (let name of _.shuffle(["cristina", "lucas", "yue", "josh", "brayden", "chris", "abdullah"])) {
       this[name] = new Member(this.container, name);
       this[name].draw();
     }

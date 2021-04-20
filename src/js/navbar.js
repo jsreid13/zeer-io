@@ -72,20 +72,6 @@ class Navbar {
             _this.collapse();
             _this.onChangePage(logo);
         };
-
-        let links = {};
-        links.instagram = "https://www.instagram.com/jellyfishfab/";
-        links.facebook = "https://www.facebook.com/jellyfishfab";
-        links.linkedin = "https://www.linkedin.com/company/jellyfishfab";
-        links.youtube = "https://www.youtube.com/channel/UCASRxy5OjkMZyVIAg3Iophg";
-    
-        _.map(links, (link, name) => {
-            this.subnav.querySelector(`.${name}-button`).onclick = () => {
-                analytics.logEvent("social_clicked", {name});
-                window.location.href = link;
-            }
-        });
-
     }
 }
 

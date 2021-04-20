@@ -2,11 +2,10 @@
 .header-content {
     // color: $orange-color;
     // color: $purple-color;
-    color: darkgray;
+    color: black;
     top: 250px;
     position: absolute;
     left: $navbar-bleed;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 
     .ml11 .text-wrapper {
       position: relative;
@@ -37,7 +36,7 @@
     }
     
     h1 {
-      font-family: 'Neon';
+      font-family: 'SourceCode';
       font-size: 5vw;
     }
     h2 {

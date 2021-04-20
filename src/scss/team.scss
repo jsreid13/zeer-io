@@ -74,12 +74,11 @@ $navbar-bleed: 30px;
       }
   
       .member-text-wrapper {
-        margin-left: 50px;
-        top: 150px;
-        margin-bottom: 200px;
         width: 100%;
         height: fit-content;
         overflow: hidden;
+        position: absolute;
+        bottom: 0px;
       }
       
       #lucas .member-text-wrapper {
@@ -88,13 +87,13 @@ $navbar-bleed: 30px;
   
       .member-text {
         
-        background: rgb(98, 229, 246);
+        background: white;
         color: rgb(38,38,38);
         padding: 30px;
-        width: 75vw;
+        width: 100%;
         z-index: 3;
         @media screen and (min-width: $break-small) {
-          width: 480px;
+          width: 100%;
         }
   
         h1 {
@@ -147,7 +146,28 @@ $navbar-bleed: 30px;
         // background-position-y: 95px;
         // background-position-x: right;
       }
+
+      .member-background-bw.josh-background {
+        background-image: url(/assets/josh-color.jpg);
+        // background-position-y: 95px;
+        // background-position-x: right;
+      }
   
+      .member-background-bw.brayden-background {
+        background-image: url(/assets/brayden-color.jpg);
+        // background-position-y: 95px;
+        // background-position-x: right;
+      }
+      .member-background-bw.chris-background {
+        background-image: url(/assets/chris-color.jpg);
+        // background-position-y: 95px;
+        // background-position-x: right;
+      }
+      .member-background-bw.abdullah-background {
+        background-image: url(/assets/abdullah-color.png);
+        // background-position-y: 95px;
+        // background-position-x: right;
+      }
       .member-background {
         position: absolute;
         background-size: cover;

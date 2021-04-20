@@ -18,7 +18,7 @@
       width: 16vw;
       height: 16vw;
       margin: 2vw;
-      color: #8332fc;
+      color: white;;
       border-radius: 1000px;
       position: relative;
       font-family: DIN;
@@ -53,8 +53,12 @@
   .ml14 {
     font-family: SourceCode;
     font-weight: 200;
-    font-size: 6vw;
+    font-size: 3vw;
     padding-bottom: 50px;
+    color: white;
+    text-align: justify;
+    width: 90vw;
+    margin: 0 auto;
   }
 
   .ml14 .text-wrapper {
